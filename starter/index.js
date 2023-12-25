@@ -1,4 +1,4 @@
-var finances = [
+var finances =[
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
   ['Mar-2010', 322013],
@@ -85,17 +85,35 @@ var finances = [
   ['Dec-2016', 60988],
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
-];
+]
+var finances1=parseInt(finances);
+console.log(typeof finances1);
 // write JavaScript code that analyzes the records to calculate each of the following:
 
   // The total number of months included in the dataset.
-  var monthNumber=(finances.length)
-  console.log(monthNumber);
-  // The net total amount of Profit/Losses over the entire period.
-  // The average of the changes in Profit/Losses over the entire period.
+//   var monthNumber=finances.length;//Displayes the number of months in the array 
+//   console.log(monthNumber);
+//   // The net total amount of Profit/Losses over the entire period.
+// var profit=0;
+// var losses=0;
+// for (var i = 0; i < finances.length; i++) {
+//   if (finances[i]>0) {
+//     profit += finances[i];
+    
+
+//   } else if (finances[i]<0){
+//     losses += finances[i];
+// } else {console.log("am so tired ");
+// }}
+
+// console.log("profits "+profit);
+// console.log("loses "+losses);
+// The average of the changes in Profit/Losses over the entire period.
   // You will need to track what the total change in profits is from month to month and then find the average.
   // (Total/(Number of months - 1))
+
   // The greatest increase in profits (date and difference in the amounts) over the entire period.
+
   // The greatest decrease in losses (date and difference in the amounts) over the entire period.
 
 // When you open your code in the browser your resulting analysis should look similar to the following:
@@ -113,4 +131,34 @@ var finances = [
 
 // You will need to do some research on your own for this project!
 // Remember, in order to combine strings and variables in the console, you will need to use concatenation.
-// How do you only print to the nearest 100th in JavaScript?
+// How do you only print to the nearest 100th in JavaScript
+// Get the number of months in the array
+// Given array of financial data
+// var finances = [
+//   ['Jan-2010', 867884],
+//   ['Feb-2010', 984655],
+//   // ... (remaining array elements)
+//   ['Jul-2011', 62729]
+//   ];
+  
+//   // Variables to store net profit and net loss
+//   var netProfit = 0;
+//   var netLoss = 0;
+  
+//   // Loop through each entry in the 'finances' array
+//   for (let i = 0; i < finances.length; i++) {
+//     // Check if the financial value for the month is positive (profit)
+//     if (finances[i][1] > 0) {
+//       // If positive, add it to the net profit
+//       netProfit += finances[i][1];
+//     } else {
+//       // If negative, add it to the net loss
+//       netLoss += finances[i][1];
+//     }
+//   }
+  
+//   // Display the net profit and net loss
+//   console.log("Net Profit: $" + netProfit.toLocaleString());
+//   console.log("Net Loss: $" + netLoss.toLocaleString());
+  // Given array of financial data
+
