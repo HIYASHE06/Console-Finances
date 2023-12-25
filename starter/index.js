@@ -104,19 +104,28 @@ for (let i = 0; i< finances.length; i++){
   var condition =finances[i][1]>0
   // if positive, the fanacial value is added to the profit
   if (condition) { profit+=finances[i][1]
-    // if its negative, teh fanacial value is added to the loses array
+    // if its negative, the fanacial value is added to the loses array
   } else { losses+=finances[i][1]
   
   }
 }
-var total =(profit-losses)
+var total =(profit+losses)
 console.log("Total: "+total);
 // The average of the changes in Profit/Losses over the entire period.
   // You will need to track what the total change in profits is from month to month and then find the average.
   // (Total/(Number of months - 1))
-  var change=0;
-  for (let i = 0; i< finances.length; i++){
-
+  TotalChange=0;
+  previousValue=finances[0][1];//savings from the first month
+  for (let i = 1; i < finances.length; i++) {
+    var currentValue=finances[i][1];// savings from the current month
+    
+      var change=currentValue-previousValue;// keeps track for the savings
+      TotalChange+=change
+      previousValue=currentValue;
+    }     
+var averageChange=(TotalChange/(finances.length-1));
+console.log(averageChange);
+  
   // The greatest increase in profits (date and difference in the amounts) over the entire period.
 
   // The greatest decrease in losses (date and difference in the amounts) over the entire period.
@@ -137,6 +146,6 @@ console.log("Total: "+total);
 // You will need to do some research on your own for this project!
 // Remember, in order to combine strings and variables in the console, you will need to use concatenation.
 // How do you only print to the nearest 100th in JavaScript
-// 
+
 
 
