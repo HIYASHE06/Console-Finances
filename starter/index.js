@@ -124,7 +124,7 @@ console.log("Total: "+total);
       previousValue=currentValue;
     }     
 var averageChange=(TotalChange/(finances.length-1));
-console.log(averageChange);
+console.log(averageChange.toFixed(2));
   
   // The greatest increase in profits (date and difference in the amounts) over the entire period.
 
