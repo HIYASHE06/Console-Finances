@@ -88,9 +88,9 @@ var finances =[
 ]
 var finances1=parseInt(finances);
 // write JavaScript code that analyzes the records to calculate each of the following:
-console.log("finacial analysis\n"+"----------------------------\n");
+
   // The total number of months included in the dataset.
-console.log("Total Months: "+finances.length);
+
   //Displayes the number of months in the array 
 
 // The net total amount of Profit/Losses over the entire period.
@@ -109,7 +109,7 @@ for (var i= 0; i< finances.length; i++){
   }
 }
 var total =(profit+losses)
-console.log("Total: "+total);
+
 // The average of the changes in Profit/Losses over the entire period.
   // You will need to track what the total change in profits is from month to month and then find the average.
   // (Total/(Number of months - 1))
@@ -144,30 +144,16 @@ console.log("Total: "+total);
       
     }     
 var averageChange=(TotalChange/(finances.length-1));//-1 is necessary because the change in profits or losses can only be calculated between two consecutive months
-console.log(averageChange.toFixed(2));
-console.log(greatestIncrease);
-console.log(greatestDecrease);
-console.log(increaseDate);
-console.log(decreaseDate);
-
-  // The greatest increase in profits (date and difference in the amounts) over the entire period.
-
-
-  
-  // The greatest decrease in losses (date and difference in the amounts) over the entire period.
-
-// When you open your code in the browser your resulting analysis should look similar to the following:
-
-// Financial Analysis
-// ----------------------------
-// Total Months: 86
-// Total: $38382578
-// Average Change: -2315.12
-// Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
-// Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-
 /*Your final code should print the analysis to the console.*/
-
+console.log(
+  "\nFinancial Analysis" +
+  "\n----------------------------" +
+  "\nTotal Months: "+finances.length+
+  "\nTotal: $"+total+
+  "\nAverage Change:"+" "+ averageChange.toFixed(2)+
+  "\nGreatest Increase in Profits/Losses: "+increaseDate+" "+"("+"$"+greatestIncrease+")"+
+  "\nGreatest Decrease in Profits/Losses: "+decreaseDate+" " +"("+"$"+greatestDecrease+")"
+);
 // Hints:
 
 // You will need to do some research on your own for this project!
