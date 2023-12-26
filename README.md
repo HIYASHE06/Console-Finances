@@ -20,7 +20,7 @@ The program allows companies to predict and plan for future expenditures and inc
 ## Output
 
 The code will print the financial analysis to the console. The output will look something like this:
-![alt text](/Console-Finances/Screenshot%202023-12-26%20211044.png).
+![alt text](Screenshot%202023-12-26%20211044.png).
 *DEPLOYED WEBSITE* <https://hiyashe06.github.io/Console-Finances/>
 
 ## How to Use
