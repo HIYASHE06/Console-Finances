@@ -87,7 +87,6 @@ var finances =[
   ['Feb-2017', 671099],
 ]
 var finances1=parseInt(finances);
-
 // write JavaScript code that analyzes the records to calculate each of the following:
 console.log("finacial analysis\n"+"----------------------------\n");
   // The total number of months included in the dataset.
@@ -99,7 +98,7 @@ var losses=0;
   profit=0;
 
 // the loop will iterate through each element fo the array
-for (let i = 0; i< finances.length; i++){
+for (var i= 0; i< finances.length; i++){
   //The condition checks if the fanacial value of teh month is positive
   var condition =finances[i][1]>0
   // if positive, the fanacial value is added to the profit
@@ -114,20 +113,47 @@ console.log("Total: "+total);
 // The average of the changes in Profit/Losses over the entire period.
   // You will need to track what the total change in profits is from month to month and then find the average.
   // (Total/(Number of months - 1))
-  TotalChange=0;
-  previousValue=finances[0][1];//savings from the first month
-  for (let i = 1; i < finances.length; i++) {
+  var TotalChange=0;
+  var previousValue=finances[0][1];//savings from the first month
+  var greatestMonth="";
+  var greatestIncrease=0;
+  var greatestDecrease=0;
+  var increaseDate="";
+  var decreaseDate=""; 
+  for (var i = 1; i < finances.length; i++) {
     var currentValue=finances[i][1];// savings from the current month
-    
-      var change=currentValue-previousValue;// keeps track for the savings
-      TotalChange+=change
-      previousValue=currentValue;
-    }     
-var averageChange=(TotalChange/(finances.length-1));
-console.log(averageChange.toFixed(2));
   
+      var change=currentValue-previousValue;// keeps track for the savings
+      TotalChange+=change//adds change to teh total change
+      previousValue=currentValue; //allows the the previousvalue to acquire value of the current value
+
+      // The greatest increase in profits (date and difference in the amounts) over the entire period.
+      var PreviousValue=finances[i-1][1]
+      var differenceValue=(currentValue-PreviousValue);// records lose/profit from adjacent months
+      
+      
+      if (differenceValue >greatestIncrease) {
+        greatestIncrease=differenceValue
+        increaseDate= finances[i][0];
+      // The greatest decrease in losses (date and difference in the amounts) over the entire period.  
+      } else if(differenceValue<greatestDecrease){
+        greatestDecrease=differenceValue
+        decreaseDate=finances[i][0];
+    
+      }
+      
+    }     
+var averageChange=(TotalChange/(finances.length-1));//-1 is necessary because the change in profits or losses can only be calculated between two consecutive months
+console.log(averageChange.toFixed(2));
+console.log(greatestIncrease);
+console.log(greatestDecrease);
+console.log(increaseDate);
+console.log(decreaseDate);
+
   // The greatest increase in profits (date and difference in the amounts) over the entire period.
 
+
+  
   // The greatest decrease in losses (date and difference in the amounts) over the entire period.
 
 // When you open your code in the browser your resulting analysis should look similar to the following:
@@ -141,6 +167,7 @@ console.log(averageChange.toFixed(2));
 // Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
 
 /*Your final code should print the analysis to the console.*/
+
 // Hints:
 
 // You will need to do some research on your own for this project!
