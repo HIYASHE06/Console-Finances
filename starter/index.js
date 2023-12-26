@@ -104,7 +104,7 @@ for (var i= 0; i< finances.length; i++){
   
   }
 }
-var total =(profit+losses)
+var total =(profit+losses)//total
 
 // The average of the changes in Profit/Losses over the entire period.
   // You will need to track what the total change in profits is from month to month and then find the average.
