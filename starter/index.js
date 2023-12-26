@@ -87,12 +87,8 @@ var finances =[
   ['Feb-2017', 671099],
 ]
 var finances1=parseInt(finances);
-// write JavaScript code that analyzes the records to calculate each of the following:
-
-  // The total number of months included in the dataset.
-
   //Displayes the number of months in the array 
-
+var totalMonths= finances.length
 // The net total amount of Profit/Losses over the entire period.
 var losses=0;
   profit=0;
@@ -103,7 +99,7 @@ for (var i= 0; i< finances.length; i++){
   var condition =finances[i][1]>0
   // if positive, the fanacial value is added to the profit
   if (condition) { profit+=finances[i][1]
-    // if its negative, the fanacial value is added to the loses array
+    // if negative, the fanacial value is added to the loses array
   } else { losses+=finances[i][1]
   
   }
@@ -148,17 +144,11 @@ var averageChange=(TotalChange/(finances.length-1));//-1 is necessary because th
 console.log(
   "\nFinancial Analysis" +
   "\n----------------------------" +
-  "\nTotal Months: "+finances.length+
+  "\nTotal Months: "+totalMonths+
   "\nTotal: $"+total+
   "\nAverage Change:"+" "+ averageChange.toFixed(2)+
   "\nGreatest Increase in Profits/Losses: "+increaseDate+" "+"("+"$"+greatestIncrease+")"+
   "\nGreatest Decrease in Profits/Losses: "+decreaseDate+" " +"("+"$"+greatestDecrease+")"
 );
-// Hints:
-
-// You will need to do some research on your own for this project!
-// Remember, in order to combine strings and variables in the console, you will need to use concatenation.
-// How do you only print to the nearest 100th in JavaScript
-
 
 
