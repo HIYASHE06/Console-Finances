@@ -3,7 +3,7 @@
 ## Description
 
 The program is a **finacial analysis tool**, capable of analyzing financial records of a company to monitor the companies financial perfomance. The code analyzes the records based on certain conditions and retrives the necessary data for example,
-the program allows companies to identify the month with with the greatest profits and month with the lowest profit. This allows businesses to implement and identify succeful strategies and areas to improve and this leads to data driven decions
+the program allows companies to identify the month with the greatest profits and month with the lowest profit. This allows businesses to implement and identify succeful strategies and areas to improve and this leads to data driven decisions.
 
 The program allows companies to predict and plan for future expenditures and income, this will help companies to,
 *set realistic fianncial goals.
@@ -20,7 +20,7 @@ The program allows companies to predict and plan for future expenditures and inc
 ## Output
 
 The code will print the financial analysis to the console. The output will look something like this:
-![alt text](/Screenshot%202023-12-26%20211044.png).
+![alt text](/Console-Finances/starter/Screenshot%202023-12-26%20211044.png).
 
 ## How to Use
 
